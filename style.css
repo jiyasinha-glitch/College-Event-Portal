@@ -1,0 +1,637 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+    color: #172033;
+}
+
+
+header {
+    height: 75px;
+    background: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    border-bottom: 1px solid #e4e7ec;
+
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
+.logo h3 {
+    font-size: 17px;
+    color: #172033;
+}
+
+.logo p {
+    font-size: 9px;
+    color: #667085;
+}
+
+
+nav {
+    display: flex;
+    gap: 35px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #344054;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #3157d5;
+}
+
+
+.nav-button {
+    background: #3157d5;
+    color: white;
+
+    text-decoration: none;
+
+    padding: 11px 18px;
+
+    border-radius: 25px;
+
+    font-size: 13px;
+}
+
+.nav-button:hover {
+    background: #2445b5;
+}
+
+
+.hero {
+    min-height: 500px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 70px 8%;
+
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(5, 24, 55, 0.95),
+            rgba(5, 24, 55, 0.70),
+            rgba(5, 24, 55, 0.25)
+        ),
+        url("images/college-event.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    max-width: 550px;
+    color: white;
+}
+
+.small-title {
+    color: #3157d5;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 12px;
+}
+
+.hero .small-title {
+    color: #9eb6ff;
+}
+
+.hero h1 {
+    font-size: 55px;
+
+    line-height: 1.05;
+
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #7fa1ff;
+}
+
+.hero-description {
+    color: #e6eaf2;
+
+    font-size: 17px;
+
+    line-height: 1.6;
+}
+
+.hero-button {
+    display: inline-block;
+
+    margin-top: 25px;
+
+    background: #3157d5;
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 14px 23px;
+
+    border-radius: 25px;
+
+    font-size: 14px;
+}
+
+.hero-button:hover {
+    background: #2445b5;
+}
+
+
+.events-section,
+.categories-section,
+.past-section,
+.registration-section {
+    padding: 70px 8%;
+}
+
+.events-section,
+.past-section {
+    background: #f5f7fb;
+}
+
+.categories-section {
+    background: white;
+}
+
+
+.section-heading {
+    margin-bottom: 30px;
+}
+
+.section-heading h2,
+.categories-section h2,
+.past-section h2,
+.registration-box h2 {
+    font-size: 32px;
+
+    margin-bottom: 10px;
+
+    color: #172b52;
+}
+
+.section-heading p:not(.small-title),
+.categories-section > p,
+.past-section > p,
+.registration-box > p {
+    color: #667085;
+
+    line-height: 1.6;
+}
+
+
+.event-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+
+.event-card {
+    background: white;
+
+    border: 1px solid #e1e6ef;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    box-shadow: 0 3px 12px rgba(30, 50, 90, 0.05);
+}
+
+.event-card:hover {
+    box-shadow: 0 8px 25px rgba(30, 50, 90, 0.1);
+}
+
+
+.event-card img {
+    width: 100%;
+    height: 180px;
+
+    object-fit: cover;
+}
+
+
+.event-content {
+    padding: 18px;
+}
+
+.event-content h3 {
+    font-size: 17px;
+
+    color: #172b52;
+
+    margin-bottom: 12px;
+}
+
+
+.event-category {
+    display: inline-block;
+
+    background: #e8eeff;
+
+    color: #3157d5;
+
+    padding: 5px 10px;
+
+    border-radius: 15px;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    margin-bottom: 12px;
+}
+
+.event-category.cultural {
+    background: #f0e9ff;
+    color: #7856c7;
+}
+
+.event-category.sports {
+    background: #e4f7f2;
+    color: #16836d;
+}
+
+.event-category.workshop {
+    background: #fff1df;
+    color: #b56a12;
+}
+
+
+.event-info {
+    color: #667085;
+
+    font-size: 12px;
+
+    line-height: 1.8;
+
+    margin-bottom: 10px;
+}
+
+.event-description {
+    color: #667085;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+
+    margin-bottom: 15px;
+}
+
+
+.register-btn {
+    display: inline-block;
+
+    background: #e8eeff;
+
+    color: #3157d5;
+
+    text-decoration: none;
+
+    padding: 9px 14px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+.register-btn:hover {
+    background: #3157d5;
+    color: white;
+}
+
+
+.category-intro {
+    margin-bottom: 30px;
+}
+
+.category-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+
+    margin-top: 30px;
+}
+
+.category-card {
+    background: #f8faff;
+
+    border: 1px solid #e1e6ef;
+
+    border-radius: 12px;
+
+    padding: 30px 20px;
+
+    text-align: center;
+}
+
+.category-card:hover {
+    border-color: #3157d5;
+}
+
+.category-icon {
+    width: 50px;
+    height: 50px;
+
+    margin: auto;
+    margin-bottom: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #e8eeff;
+
+    color: #3157d5;
+
+    border-radius: 50%;
+
+    font-size: 20px;
+}
+
+.category-card h3 {
+    margin-bottom: 10px;
+
+    color: #172b52;
+}
+
+.category-card p {
+    color: #667085;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+
+.past-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+
+    margin-top: 30px;
+}
+
+.past-card {
+    background: white;
+
+    display: flex;
+
+    border: 1px solid #e1e6ef;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+}
+
+.past-card img {
+    width: 180px;
+
+    height: 150px;
+
+    object-fit: cover;
+}
+
+.past-content {
+    padding: 20px;
+}
+
+.past-content h3 {
+    color: #172b52;
+
+    margin-bottom: 8px;
+}
+
+.past-content p {
+    color: #667085;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+
+    margin-bottom: 5px;
+}
+
+
+.registration-section {
+    background: white;
+}
+
+.registration-box {
+    max-width: 550px;
+
+    margin: auto;
+
+    background: #f8faff;
+
+    border: 1px solid #e1e6ef;
+
+    padding: 35px;
+
+    border-radius: 12px;
+}
+
+.registration-box form {
+    margin-top: 25px;
+}
+
+.registration-box label {
+    display: block;
+
+    margin-top: 14px;
+    margin-bottom: 6px;
+
+    font-size: 13px;
+
+    color: #344054;
+}
+
+.registration-box input,
+.registration-box select {
+    width: 100%;
+
+    padding: 11px;
+
+    border: 1px solid #d8deea;
+
+    border-radius: 6px;
+
+    background: white;
+
+    outline: none;
+}
+
+.registration-box input:focus,
+.registration-box select:focus {
+    border-color: #3157d5;
+}
+
+.submit-btn {
+    width: 100%;
+
+    margin-top: 22px;
+
+    padding: 12px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background: #3157d5;
+
+    color: white;
+
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background: #2445b5;
+}
+
+
+footer {
+    background: #172b52;
+
+    color: white;
+
+    padding: 30px 8%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+footer h3 {
+    margin-bottom: 5px;
+}
+
+footer p {
+    color: #b9c5dc;
+
+    font-size: 13px;
+}
+
+
+@media (max-width: 1000px) {
+
+    nav {
+        gap: 15px;
+    }
+
+    .event-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    header {
+        height: auto;
+
+        padding: 15px 5%;
+
+        flex-wrap: wrap;
+
+        gap: 15px;
+    }
+
+    nav {
+        order: 3;
+
+        width: 100%;
+
+        justify-content: center;
+
+        gap: 15px;
+    }
+
+    .nav-button {
+        display: none;
+    }
+
+    .hero {
+        min-height: 550px;
+
+        padding: 50px 7%;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .event-grid,
+    .category-grid,
+    .past-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .past-card {
+        display: block;
+    }
+
+    .past-card img {
+        width: 100%;
+        height: 180px;
+    }
+
+    footer {
+        flex-direction: column;
+
+        gap: 15px;
+
+        text-align: center;
+    }
+}
